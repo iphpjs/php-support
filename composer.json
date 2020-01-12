@@ -1,0 +1,21 @@
+{
+    "name": "iphpjs/support",
+    "description": "The Iphpjs Support package.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NetworkRanger",
+            "email": "admin@iphpjs.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Iphpjs\\Support\\": ""
+        }
+    },
+    "require": {
+        "php": "^7.2"
+    }
+}
