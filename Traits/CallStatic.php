@@ -9,26 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Iphpjs\Support\Facades;
+namespace Iphpjs\Support\Traits;
 
-abstract class Facade
+trait CallStatic
 {
-	public static array $resolved;
-
-	abstract protected static function getFacadeRoot();
-
-	/**
-	 * Handle dynamic method calls into the model.
-	 *
-	 * @param string $method
-	 * @param array $parameters
-	 * @return mixed
-	 */
-	public function __call($method, $parameters)
-	{
-		return $this->getFacadeRoot()->$method(...$parameters);
-	}
-
 	/**
 	 * Handle dynamic static method calls into the method.
 	 *
@@ -41,3 +25,4 @@ abstract class Facade
 		return (new static)->$method(...$parameters);
 	}
 }
+
